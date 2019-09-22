@@ -12,4 +12,4 @@ Many Example for use CodeIgniter Framework
   - Path (c/xampp/htdocs) or Linux path.
 
 ### Samples Update Almost Daily :
-  - [Use Pattern HMVC ](https://github.com/Ekhel/django-practical/tree/master/application/modules)
+  - [Use Pattern HMVC ](https://github.com/Ekhel/codeigniter-practical/tree/master/application/modules)
