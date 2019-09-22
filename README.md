@@ -4,6 +4,7 @@ Many Example for use CodeIgniter Framework
 ## Versioning requirements
   - php
   - CodeIgniter 3
+  - HMVC Pattern
 
 ### How to Run this repository on your machine :
   - Clone Project
@@ -11,3 +12,4 @@ Many Example for use CodeIgniter Framework
   - Path (c/xampp/htdocs) or Linux path.
 
 ### Samples Update Almost Daily :
+  - [Use Pattern HMVC ](https://github.com/Ekhel/django-practical/tree/master/application/modules)
