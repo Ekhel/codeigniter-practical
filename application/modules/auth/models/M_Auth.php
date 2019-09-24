@@ -1,5 +1,5 @@
 <?php
-class M_login extends CI_Model {
+class M_auth extends CI_Model {
 	var $table = 'tb_user';
 	//cek user dan sandi di database
 	function cek($user, $sandi){

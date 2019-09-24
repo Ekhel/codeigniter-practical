@@ -4,199 +4,314 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title><?php echo $title?></title>
+    <title><?php echo $title ?></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url()?>assets/img/KabJayapura.png">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Google Fonts
+		============================================ -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800" rel="stylesheet">
+    <!-- Bootstrap CSS
+		============================================ -->
     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/bootstrap.min.css">
+    <!-- Bootstrap CSS
+		============================================ -->
     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/font-awesome.min.css">
+    <!-- adminpro icon CSS
+		============================================ -->
     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/adminpro-custon-icon.css">
+    <!-- meanmenu icon CSS
+		============================================ -->
     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/meanmenu.min.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/jquery.mCustomScrollbar.min.css">
+    <!-- animate CSS
+		============================================ -->
     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/animate.css">
+    <!-- jvectormap CSS
+		============================================ -->
     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/jvectormap/jquery-jvectormap-2.0.3.css">
+    <!-- normalize CSS
+		============================================ -->
     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/data-table/bootstrap-table.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/data-table/bootstrap-editable.css">
+    <!-- normalize CSS
+		============================================ -->
     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/normalize.css">
+    <!-- charts CSS
+		============================================ -->
     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/c3.min.css">
+    <!-- style CSS
+		============================================ -->
     <link rel="stylesheet" href="<?php echo base_url()?>assets/style.css">
+    <!-- responsive CSS
+		============================================ -->
     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/responsive.css">
+    <!-- modernizr JS
+		============================================ -->
     <script src="<?php echo base_url()?>assets/js/vendor/modernizr-2.8.3.min.js"></script>
-    <?php if(isset($map['js'])) echo $map['js'];?>
 </head>
+
 <body class="materialdesign">
-    <div class="header-top-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="admin-logo">
-                        <a href="#"><img src="<?php echo base_url()?>assets/img/KabJayapura.png" width="30px" alt="" />
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-5 col-sm-0 col-xs-12">
-                    <div class="header-top-menu">
-                        <ul class="nav navbar-nav mai-top-nav">
-                            <li class="nav-item"><a href="#" class="nav-link">Beranda</a>
-                            </li>
-                            <li class="nav-item"><a href="<?php echo base_url()?>home/peta_sekolah" class="nav-link">Peta Sekolah</a>
-                            </li>
-                            <li class="nav-item"><a href="#" class="nav-link">Tentang</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <?php if ($this->session->userdata('nama') === NULL) {?>
-                <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
-                    <div class="header-right-info">
-                      <ul class="nav navbar-nav mai-top-nav header-right-menu">
-                        <li>
-                          <a href="<?php echo base_url()?>Login" role="button" aria-expanded="false" class="nav-link" title="Login">
-                            <span class="adminpro-icon adminpro-icon adminpro-locked"></span></a>
-                        </li>
-                      </ul>
-                    </div>
-                </div>
-              <?php }
-              else{?>
-                <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
-                    <div class="header-right-info">
-                      <ul class="nav navbar-nav mai-top-nav header-right-menu">
-                        <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa fa-bell-o" aria-hidden="true"></i><span class="indicator-nt"></span></a>
-                          <div role="menu" class="notification-author dropdown-menu animated flipInX">
-                              <div class="notification-single-top">
-                                  <h1>Notifikasi</h1>
-                              </div>
-                              <ul class="notification-menu">
-                                  <li>
-                                      <a href="#">
-                                          <div class="notification-icon">
-                                              <span class="adminpro-icon adminpro-checked-pro"></span>
-                                          </div>
-                                          <div class="notification-content">
-                                              <span class="notification-date">16 Sept</span>
-                                              <h2>Advanda Cro</h2>
-                                              <p>Please done this project as soon possible.</p>
-                                          </div>
-                                      </a>
-                                  </li>
-                                  <li>
-                                      <a href="#">
-                                          <div class="notification-icon">
-                                              <span class="adminpro-icon adminpro-cloud-computing-down"></span>
-                                          </div>
-                                          <div class="notification-content">
-                                              <span class="notification-date">16 Sept</span>
-                                              <h2>Sulaiman din</h2>
-                                              <p>Please done this project as soon possible.</p>
-                                          </div>
-                                      </a>
-                                  </li>
-                                  <li>
-                                      <a href="#">
-                                          <div class="notification-icon">
-                                              <span class="adminpro-icon adminpro-shield"></span>
-                                          </div>
-                                          <div class="notification-content">
-                                              <span class="notification-date">16 Sept</span>
-                                              <h2>Victor Jara</h2>
-                                              <p>Please done this project as soon possible.</p>
-                                          </div>
-                                      </a>
-                                  </li>
-                                  <li>
-                                      <a href="#">
-                                          <div class="notification-icon">
-                                              <span class="adminpro-icon adminpro-analytics-arrow"></span>
-                                          </div>
-                                          <div class="notification-content">
-                                              <span class="notification-date">16 Sept</span>
-                                              <h2>Victor Jara</h2>
-                                              <p>Please done this project as soon possible.</p>
-                                          </div>
-                                      </a>
-                                  </li>
-                              </ul>
-                              <div class="notification-view">
-                                  <a href="#">View All Notification</a>
+  <div class="wrapper-pro">
+      <div class="left-sidebar-pro">
+          <nav id="sidebar">
+              <div class="sidebar-header">
+                  <a href="<?php echo base_url()?>Home/beranda/1"><img src="<?php echo base_url()?>assets/img/message/1.png" alt="" />
+                  </a>
+                  <h3 class="uppercase">Practical </h3>
+                  <p><?php echo $this->session->userdata('nik') ?></p>
+                  <strong>CI</strong>
+              </div>
+              <?php $this->load->view('menu_level') ?>
+          </nav>
+      </div>
+      <!-- Header top area start-->
+      <div class="content-inner-all">
+          <div class="header-top-area">
+              <div class="fixed-header-top">
+                  <div class="container-fluid">
+                      <div class="row">
+                          <div class="col-lg-1 col-md-6 col-sm-6 col-xs-12">
+                              <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn btn-success navbar-btn">
+                                  <i class="fa fa-bars"></i>
+                              </button>
+                              <div class="admin-logo logo-wrap-pro">
+                                  <a href="#"><img src="img/logo/log.png" alt="" />
+                                  </a>
                               </div>
                           </div>
-                        </li>
-                        <li class="nav-item">
-                          <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
-                            <span class="adminpro-icon adminpro-user-rounded header-riht-inf"></span>
-                            <span class="admin-name"><?php echo $this->session->userdata('nama') ?></span>
-                            <span class="author-project-icon adminpro-icon adminpro-down-arrow"></span>
-                          </a>
-                          <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated flipInX">
-                            <li><a href="#"><span class="adminpro-icon adminpro-home-admin author-log-ic"></span>Akun</a>
-                            </li>
-                            <li><a href="<?php echo base_url()?>sekolah"><span class="adminpro-icon adminpro-user-rounded author-log-ic"></span>Profile Sekolah</a>
-                            </li>
-                            <li><a href="<?php echo base_url()?>econtrolling"><span class="adminpro-icon adminpro-money author-log-ic"></span>Data Sekolah</a>
-                            </li>
-                            <li><a href="<?php echo base_url()?>emonitoring"><span class="adminpro-icon adminpro-settings author-log-ic"></span>Lokasi Sekolah</a>
-                            </li>
-                            <li><a href="<?php echo base_url('Login/logout') ?>"><span class="adminpro-icon adminpro-locked author-log-ic"></span>Log Out</a>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
-                </div>
-        </div>
-    </div>
-  </div>
-  <div class="main-menu-area mg-t-40">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12">
-              <div class="sparkline13-list shadow-reset">
-                <div class="sparkline12-graph">
-                  <ul class="nav nav-tabs custom-menu-wrap">
-                      <li><a href="<?php echo base_url()?>Profil">Indentitas <i class="fa fa-book"></i></a>
-                      </li>
-                      <li><a href="<?php echo base_url()?>Fasilitas">Sarpras </a>
-                      </li>
-                      <li><a href="<?php echo base_url()?>Guru">Guru <i class="fa fa-users"></i></a>
-                      </li>
-                      <li><a href="<?php echo base_url()?>">Data Pendukung</a>
-                      </li>
-                      <li><a href="<?php echo base_url()?>">Exkul</a>
-                      </li>
-                      </li>
-                  </ul>
-                </div>
+                          <div class="col-lg-6 col-md-1 col-sm-1 col-xs-12">
+                              <div class="header-top-menu tabl-d-n">
+                                  <ul class="nav navbar-nav mai-top-nav">
+                                      <li class="nav-item dropdown">
+                                          <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">API <span class="angle-down-topmenu"><i class="fa fa-angle-down"></i></span></a>
+                                          <div role="menu" class="dropdown-menu animated flipInX">
+                                              <a href="<?php echo base_url()?>Api/Dokumentasi" class="dropdown-item">Dokumentasi API </a>
+                                              <a href="<?php echo base_url()?>Api/pasien" target="_blank" class="dropdown-item">Pasien</a>
+                                              <a href="<?php echo base_url()?>Api/dokter" target="_blank" class="dropdown-item">Dokter</a>
+                                          </div>
+                                      </li>
+                                      <li class="nav-item dropdown">
+                                          <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">GraphQL <span class="angle-down-topmenu"><i class="fa fa-angle-down"></i></span></a>
+                                          <div role="menu" class="dropdown-menu animated flipInX">
+                                              <a href="#" class="dropdown-item">Dokumentasi GraphQL </a>
+                                              <a href="#" class="dropdown-item">Dokter</a>
+                                              <a href="#" class="dropdown-item">Pasien</a>
+
+                                          </div>
+                                      </li>
+                                      <li class="nav-item dropdown">
+                                          <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">Bridge <span class="angle-down-topmenu"><i class="fa fa-angle-down"></i></span></a>
+                                          <div role="menu" class="dropdown-menu animated flipInX">
+                                              <a href="#" class="dropdown-item">BPJS</a>
+                                          </div>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+                              <div class="header-right-info">
+                                  <ul class="nav navbar-nav mai-top-nav header-right-menu">
+                                      <li class="nav-item">
+                                          <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                                              <span class="adminpro-icon adminpro-user-rounded header-riht-inf"></span>
+                                              <span class="admin-name"><?php echo $this->session->userdata('nama') ?></span>
+                                              <span class="author-project-icon adminpro-icon adminpro-down-arrow"></span>
+                                          </a>
+                                          <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated flipInX">
+                                              <li><a href="#"><span class="adminpro-icon adminpro-settings author-log-ic"></span>Akun</a>
+                                              </li>
+                                              <li><a href="<?php echo base_url()?>Auth/logout"><span class="adminpro-icon adminpro-locked author-log-ic"></span>Keluar</a>
+                                              </li>
+                                          </ul>
+                                      </li>
+                                      <li class="nav-item nav-setting-open"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa fa-tasks"></i></a>
+
+                                          <div role="menu" class="admintab-wrap menu-setting-wrap menu-setting-wrap-bg dropdown-menu animated flipInX">
+                                          </div>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
-            </div>
-        </div>
-    </div>
-</div>
-<br/>
-  <?php } ?>
-    <?php echo $contents ?>
-    <!-- Header top area end-->
-    <!--<div class="row">
-      <div class="col-lg-12">
-        <br/>
+          </div>
+          <!-- Header top area end-->
+          <!-- Breadcome start-->
 
+          <!-- Breadcome End-->
+          <!-- Mobile Menu start -->
+          <div class="mobile-menu-area">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                          <div class="mobile-menu">
+                              <nav id="dropdown">
+                                  <ul class="mobile-menu-nav">
+                                      <li><a data-toggle="collapse" data-target="#Charts" href="#">Home <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                          <ul class="collapse dropdown-header-top">
+                                              <li><a href="dashboard.html">Dashboard v.1</a>
+                                              </li>
+                                              <li><a href="dashboard-2.html">Dashboard v.2</a>
+                                              </li>
+                                              <li><a href="analytics.html">Analytics</a>
+                                              </li>
+                                              <li><a href="widgets.html">Widgets</a>
+                                              </li>
+                                          </ul>
+                                      </li>
+                                      <li><a data-toggle="collapse" data-target="#demo" href="#">Mailbox <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                          <ul id="demo" class="collapse dropdown-header-top">
+                                              <li><a href="inbox.html">Inbox</a>
+                                              </li>
+                                              <li><a href="view-mail.html">View Mail</a>
+                                              </li>
+                                              <li><a href="compose-mail.html">Compose Mail</a>
+                                              </li>
+                                          </ul>
+                                      </li>
+                                      <li><a data-toggle="collapse" data-target="#others" href="#">Miscellaneous <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                          <ul id="others" class="collapse dropdown-header-top">
+                                              <li><a href="profile.html">Profile</a>
+                                              </li>
+                                              <li><a href="contact-client.html">Contact Client</a>
+                                              </li>
+                                              <li><a href="contact-client-v.1.html">Contact Client v.1</a>
+                                              </li>
+                                              <li><a href="project-list.html">Project List</a>
+                                              </li>
+                                              <li><a href="project-details.html">Project Details</a>
+                                              </li>
+                                          </ul>
+                                      </li>
+                                      <li><a data-toggle="collapse" data-target="#Miscellaneousmob" href="#">Interface <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                          <ul id="Miscellaneousmob" class="collapse dropdown-header-top">
+                                              <li><a href="google-map.html">Google Map</a>
+                                              </li>
+                                              <li><a href="data-maps.html">Data Maps</a>
+                                              </li>
+                                              <li><a href="pdf-viewer.html">Pdf Viewer</a>
+                                              </li>
+                                              <li><a href="x-editable.html">X-Editable</a>
+                                              </li>
+                                              <li><a href="code-editor.html">Code Editor</a>
+                                              </li>
+                                              <li><a href="tree-view.html">Tree View</a>
+                                              </li>
+                                              <li><a href="preloader.html">Preloader</a>
+                                              </li>
+                                              <li><a href="images-cropper.html">Images Cropper</a>
+                                              </li>
+                                          </ul>
+                                      </li>
+                                      <li><a data-toggle="collapse" data-target="#Chartsmob" href="#">Charts <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                          <ul id="Chartsmob" class="collapse dropdown-header-top">
+                                              <li><a href="bar-charts.html">Bar Charts</a>
+                                              </li>
+                                              <li><a href="line-charts.html">Line Charts</a>
+                                              </li>
+                                              <li><a href="area-charts.html">Area Charts</a>
+                                              </li>
+                                              <li><a href="rounded-chart.html">Rounded Charts</a>
+                                              </li>
+                                              <li><a href="c3.html">C3 Charts</a>
+                                              </li>
+                                              <li><a href="sparkline.html">Sparkline Charts</a>
+                                              </li>
+                                              <li><a href="peity.html">Peity Charts</a>
+                                              </li>
+                                          </ul>
+                                      </li>
+                                      <li><a data-toggle="collapse" data-target="#Tablesmob" href="#">Tables <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                          <ul id="Tablesmob" class="collapse dropdown-header-top">
+                                              <li><a href="static-table.html">Static Table</a>
+                                              </li>
+                                              <li><a href="data-table.html">Data Table</a>
+                                              </li>
+                                          </ul>
+                                      </li>
+                                      <li><a data-toggle="collapse" data-target="#formsmob" href="#">Forms <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                          <ul id="formsmob" class="collapse dropdown-header-top">
+                                              <li><a href="basic-form-element.html">Basic Form Elements</a>
+                                              </li>
+                                              <li><a href="advance-form-element.html">Advanced Form Elements</a>
+                                              </li>
+                                              <li><a href="password-meter.html">Password Meter</a>
+                                              </li>
+                                              <li><a href="multi-upload.html">Multi Upload</a>
+                                              </li>
+                                              <li><a href="tinymc.html">Text Editor</a>
+                                              </li>
+                                              <li><a href="dual-list-box.html">Dual List Box</a>
+                                              </li>
+                                          </ul>
+                                      </li>
+                                      <li><a data-toggle="collapse" data-target="#Appviewsmob" href="#">App views <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                          <ul id="Appviewsmob" class="collapse dropdown-header-top">
+                                              <li><a href="basic-form-element.html">Basic Form Elements</a>
+                                              </li>
+                                              <li><a href="advance-form-element.html">Advanced Form Elements</a>
+                                              </li>
+                                              <li><a href="password-meter.html">Password Meter</a>
+                                              </li>
+                                              <li><a href="multi-upload.html">Multi Upload</a>
+                                              </li>
+                                              <li><a href="tinymc.html">Text Editor</a>
+                                              </li>
+                                              <li><a href="dual-list-box.html">Dual List Box</a>
+                                              </li>
+                                          </ul>
+                                      </li>
+                                      <li><a data-toggle="collapse" data-target="#Pagemob" href="#">Pages <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                          <ul id="Pagemob" class="collapse dropdown-header-top">
+                                              <li><a href="login.html">Login</a>
+                                              </li>
+                                              <li><a href="register.html">Register</a>
+                                              </li>
+                                              <li><a href="captcha.html">Captcha</a>
+                                              </li>
+                                              <li><a href="checkout.html">Checkout</a>
+                                              </li>
+                                              <li><a href="contact.html">Contacts</a>
+                                              </li>
+                                              <li><a href="review.html">Review</a>
+                                              </li>
+                                              <li><a href="order.html">Order</a>
+                                              </li>
+                                              <li><a href="comment.html">Comment</a>
+                                              </li>
+                                          </ul>
+                                      </li>
+                                  </ul>
+                              </nav>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- Start Content !-->
+          <?php echo $contents?>
+          <!-- End Content !-->
       </div>
-    </div>!-->
-
-    <!-- Footer Start-->
-    <div class="footer-copyright-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="footer-copy-right">
-                        <p>Copyright &#169; 2018</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End-->
+  </div>
+  <!-- Footer Start-->
+  <div class="footer-copyright-area">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="footer-copy-right">
+                      <p>Copyright &#169; 2019 Colorlibs</a></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+    <!-- Chat Box End-->
     <!-- jquery
 		============================================ -->
     <script src="<?php echo base_url()?>assets/js/vendor/jquery-1.11.3.min.js"></script>
@@ -217,7 +332,7 @@
     <script src="<?php echo base_url()?>assets/js/jquery.scrollUp.min.js"></script>
     <!-- scrollUp JS
 		============================================ -->
-    <script src="<?php echo base_url()?>assets/js/wow/wow.min.js"></script>
+    <script src="<?php echo base_url()?>assets/<?php echo base_url()?>assets/js/wow/wow.min.js"></script>
     <!-- counterup JS
 		============================================ -->
     <script src="<?php echo base_url()?>assets/js/counterup/jquery.counterup.min.js"></script>
@@ -238,13 +353,7 @@
     <script src="<?php echo base_url()?>assets/js/sparkline/sparkline-active.js"></script>
     <!-- flot JS
 		============================================ -->
-    <script src="<?php echo base_url()?>assets/js/flot/jquery.flot.js"></script>
-    <script src="<?php echo base_url()?>assets/js/flot/jquery.flot.tooltip.min.js"></script>
-    <script src="<?php echo base_url()?>assets/js/flot/jquery.flot.spline.js"></script>
-    <script src="<?php echo base_url()?>assets/js/flot/jquery.flot.resize.js"></script>
-    <script src="<?php echo base_url()?>assets/js/flot/jquery.flot.pie.js"></script>
-    <script src="<?php echo base_url()?>assets/js/flot/jquery.flot.symbol.js"></script>
-    <script src="<?php echo base_url()?>assets/js/flot/jquery.flot.time.js"></script>
+    <script src="<?php echo base_url()?>assets/js/flot/Chart.min.js"></script>
     <script src="<?php echo base_url()?>assets/js/flot/dashtwo-flot-active.js"></script>
     <!-- data table JS
 		============================================ -->

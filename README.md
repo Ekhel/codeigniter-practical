@@ -1,8 +1,8 @@
-Many Example for use CodeIgniter Framework
+## Many Example for use CodeIgniter Framework
 ------------------------------------------------------------------------------------------------
 
 ## Versioning requirements
-  - php
+  - php 5.3
   - CodeIgniter 3
   - HMVC Pattern
 
@@ -13,3 +13,4 @@ Many Example for use CodeIgniter Framework
 
 ### Samples Update Almost Daily :
   - [Use Pattern HMVC ](https://github.com/Ekhel/codeigniter-practical/tree/master/application/modules)
+  - [API Method GET without Library REST](https://github.com/Ekhel/codeigniter-practical/tree/master/application/modules/api)

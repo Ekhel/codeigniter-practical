@@ -73,12 +73,13 @@
 	
 
 	var sparklineCharts = function(){
+			var gradientColors = ['green', 'orange', 'red'];
 		 $("#sparkline22").sparkline([34, 43, 43, 35, 44, 32, 44, 52], {
 			 type: 'line',
 			 width: '100%',
 			 height: '60',
 			 lineColor: '#1ab394',
-			 fillColor: "#ebebeb"
+             fillColor: '#f4f4f4'
 		 });
 
 		 $("#sparkline23").sparkline([24, 43, 43, 55, 44, 62, 44, 72], {

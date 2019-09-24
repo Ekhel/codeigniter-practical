@@ -17,7 +17,7 @@
                 backgroundColor: "transparent",
                 regionStyle: {
                     initial: {
-                        fill: '#03a9f4',
+                        fill: '#ff9966',
                         "fill-opacity": 0.9,
                         stroke: 'none',
                         "stroke-width": 0,
